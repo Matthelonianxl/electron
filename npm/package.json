@@ -5,14 +5,18 @@
     "electron": "cli.js"
   },
   "scripts": {
-    "postinstall": "node install.js"
+    "postinstall": "node install.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@electron/get": "^1.0.1",
     "@types/node": "^10.12.18",
-    "extract-zip": "^1.0.3"
+    "extract-zip": "^1.0.3",
+    "snyk": "^1.316.1"
   },
   "engines": {
     "node": ">= 8.6"
-  }
+  },
+  "snyk": true
 }
